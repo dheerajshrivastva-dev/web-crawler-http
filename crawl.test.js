@@ -29,6 +29,20 @@ test("normaliseUrl strip http", () => {
   expect(actualOutput).toEqual(expectedOutput)
 })
 
+test("normaliseUrl invalid url", () => {
+  const input = "blog"
+  const actualOutput = normalizeURL(input)
+  const expectedOutput = ""
+  expect(actualOutput).toEqual(expectedOutput)
+})
+
+// test("normaliseUrl invalid url without TLD", () => {
+//   const input = "https://blog"
+//   const actualOutput = normalizeURL(input)
+//   const expectedOutput = ""
+//   expect(actualOutput).toEqual(expectedOutput)
+// })
+
 test("getURLsFromHTML absolute", () => {
   const inputHTMLBody = `
     <html>
